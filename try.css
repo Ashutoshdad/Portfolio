@@ -1,0 +1,8 @@
+@keyframes count-animation {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .count {
+    animation: count-animation 1s;
+  }

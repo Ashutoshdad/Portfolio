@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ashutosh Dadhich</title>
+  <link rel="icon" type="image/x-icon" href="images/favicons/android-chrome-192x192.png">
+  <link rel="icon" type="image/x-icon" href="images/favicons/android-chrome-512x512.png">
+  <link rel="icon" type="image/x-icon" href="images/favicons/apple-touch-icon.pngi">
+  <link rel="icon" type="image/x-icon" href="iamges/favicon/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="iamges/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/x-icon" href="iamges/favicon/favicon.ico">
+
+
+  <!--bootstrap 5 loading......-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+
+  <!-- bootstrap 4 loading..... -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="css/trial-color.css">
+  <link rel="stylesheet" href="css/loading-animation.css">
+
+
+  <!-- font awesome -->
+  <script defer src="https://use.fontawesome.com/release/v5.0.7/js/all.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+</head>
+
+<body>
+  <div class="loading-overlay">
+    <div class="loading-animation">
+      <svg class="bike" viewBox="0 0 48 30" width="48px" height="30px">
+        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1">
+          <g transform="translate(9.5,19)">
+            <circle class="bike__tire" r="9" stroke-dasharray="56.549 56.549" />
+            <g class="bike__spokes-spin" stroke-dasharray="31.416 31.416" stroke-dashoffset="-23.562">
+              <circle class="bike__spokes" r="5" />
+              <circle class="bike__spokes" r="5" transform="rotate(180,0,0)" />
+            </g>
+          </g>
+          <g transform="translate(24,19)">
+            <g class="bike__pedals-spin" stroke-dasharray="25.133 25.133" stroke-dashoffset="-21.991"
+              transform="rotate(67.5,0,0)">
+              <circle class="bike__pedals" r="4" />
+              <circle class="bike__pedals" r="4" transform="rotate(180,0,0)" />
+            </g>
+          </g>
+          <g transform="translate(38.5,19)">
+            <circle class="bike__tire" r="9" stroke-dasharray="56.549 56.549" />
+            <g class="bike__spokes-spin" stroke-dasharray="31.416 31.416" stroke-dashoffset="-23.562">
+              <circle class="bike__spokes" r="5" />
+              <circle class="bike__spokes" r="5" transform="rotate(180,0,0)" />
+            </g>
+          </g>
+          <polyline class="bike__seat" points="14 3,18 3" stroke-dasharray="5 5" />
+          <polyline class="bike__body" points="16 3,24 19,9.5 19,18 8,34 7,24 19" stroke-dasharray="79 79" />
+          <path class="bike__handlebars" d="m30,2h6s1,0,1,1-1,1-1,1" stroke-dasharray="10 10" />
+          <polyline class="bike__front" points="32.5 2,38.5 19" stroke-dasharray="19 19" />
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <div class="canvas-container">
+    <canvas id="canvas"></canvas>
+  </div>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href=""><img class="mine" src="images/mine.jpg"></a>
+    <h3 class="name">Ashutosh Dadhich</h3>
+    <div class="list_items">
+      <em class="size_list">
+        <a href="">HOME</a>
+        <a href="#skills_nav">SKILLS</a>
+        <a href="#achievements">ACHIEVEMENTS</a>
+        <a href="">CONTACT</a>
+        <a href="">EXPERIENCE &#xf559;</a>
+
+      </em>
+    </div>
+  </div>
+
+  <div class="button"><span style="font-size: 50px; cursor: pointer; color: rgb(255, 255, 255); " onclick="openNav()"
+      class="nav_btn">&#9776;</span></div>
+
+  <div class="content" id="content">
+    <!-- Content goes here -->
+    <div class="content-container">
+      <div class="prof-image" id="mySection"><a href="#"><img src="images/mine.jpg" alt="Image" /></a></div>
+      <div class="intro_name">Ashutosh Dadhich<br></div>
+      <div class="intro_des">Web Developer, Software Developer</div>
+    </div>
+    <section class="buttons-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <a href="https://drive.google.com/file/d/19Tl3kOwawN8NyripXPYApW4EycURCnbd/view?usp=drive_link"
+              target="_blank" ta class="resume-button">Resume</a>
+          </div>
+          <div class="col-md-6">
+            <a href="" class="contact-button">Contact</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="follow_btn">
+      <div class="section">
+        <div class="container">
+          <div class="button-container"><a class="btn btn-default btn-round btn-lg btn-icon" href="#" rel="tooltip"
+              title="Follow me on Github"><i class="fa-brands fa-github fa-xl social_icn"></i></a><a
+              class="btn btn-default btn-round btn-lg btn-icon social_icn" href="#" rel="tooltip"
+              title="Follow me on Linkedin"><i class="fa-brands fa-linkedin-in fa-xl"></i></a><a
+              class="btn btn-default btn-round btn-lg btn-icon social_icn" href="#" rel="tooltip"
+              title="Follow me on Discord"><i class="fa-brands fa-discord fa-xl"></i></a><a
+              class="btn btn-default btn-round btn-lg btn-icon social_icn" href="#" rel="tooltip"
+              title="Follow me on Instagram"><i class="fa-brands fa-instagram fa-xl"></i></a></div>
+        </div>
+    </section>
+
+
+    <section id="features">
+      <div class="row">
+        <h4>Skills</h4>
+        <div class="feature-box col-lg-4">
+          <i class="fa-brands python_img fa-python fa-3x" style="color: #000000;"></i>
+          <h5>Python Developer</h5>
+          <p class="para">Creating efficient software solutions with Python programming expertise.</p>
+        </div>
+        <div class="feature-box col-lg-4 ">
+          <i class="fa-solid web_img fa-3x fa-code" style="color: #000000;"></i>
+          <h5>Web Developer</h5>
+          <p class="para">Building dynamic websites and applications using modern programming languages and frameworks
+          </p>
+        </div>
+        <div class="feature-box col-lg-4">
+          <i class="fa-solid fa-puzzle-piece fa-3x prblm_img" style="color: #000000;"></i>
+          <h5>Problem Solver</h5>
+          <p class="para">Evaluating challenges, brainstorming ideas, and resolving complex problems</p>
+        </div>
+        <div class="feature-box col-lg-6 ">
+          <i class="fas fa-chalkboard-teacher fa-3x leader_img" style="color: #000000;"></i>
+
+          <h5>Leadership</h5>
+          <p class="para2">Leading with Vision, Inspiring with Action.<br> Managed a 500+ members community</p>
+        </div>
+        <div class="feature-box col-lg-6">
+          <i class="fa-solid res_img fa-3x fa-magnifying-glass" style="color: #000000;"></i>
+          <h5>Research</h5>
+          <p class="para2">Uncovering new insights, and exploring<br> new opportunities through research.</p>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="technologies-container">
+      <h2 class="technologies">Technologies</h2>
+      <div class="image-container">
+
+        <img src="/tech images/html.png" alt="Image 1">
+        <img src="/tech images/css.png" alt="Image 2">
+        <img src="/tech images/js.png" alt="Image 3">
+        <img src="/tech images/c programming.png" alt="Image 4">
+        <img src="/tech images/linux.png" alt="Image 5">
+        <img src="/tech images/mysql.png" alt="Image 6">
+        <img src="/tech images/python.png" alt="Image 7">
+        <img src="/tech images/vs code.png" alt="Image 8">
+        <img src="/tech images/windows.png" alt="Image 9">
+
+        <img src="/tech images/html.png" alt="Image 1">
+        <img src="/tech images/css.png" alt="Image 2">
+        <img src="/tech images/js.png" alt="Image 3">
+        <img src="/tech images/c programming.png" alt="Image 4">
+        <img src="/tech images/linux.png" alt="Image 5">
+        <img src="/tech images/mysql.png" alt="Image 6">
+        <img src="/tech images/python.png" alt="Image 7">
+        <img src="/tech images/vs code.png" alt="Image 8">
+        <img src="/tech images/windows.png" alt="Image 9">
+
+        <img src="/tech images/html.png" alt="Image 1">
+        <img src="/tech images/css.png" alt="Image 2">
+        <img src="/tech images/js.png" alt="Image 3">
+        <img src="/tech images/c programming.png" alt="Image 4">
+        <img src="/tech images/linux.png" alt="Image 5">
+        <img src="/tech images/mysql.png" alt="Image 6">
+        <img src="/tech images/python.png" alt="Image 7">
+        <img src="/tech images/vs code.png" alt="Image 8">
+        <img src="/tech images/windows.png" alt="Image 9">
+
+        <img src="/tech images/html.png" alt="Image 1">
+        <img src="/tech images/css.png" alt="Image 2">
+        <img src="/tech images/js.png" alt="Image 3">
+        <img src="/tech images/c programming.png" alt="Image 4">
+        <img src="/tech images/linux.png" alt="Image 5">
+        <img src="/tech images/mysql.png" alt="Image 6">
+        <img src="/tech images/python.png" alt="Image 7">
+        <img src="/tech images/vs code.png" alt="Image 8">
+        <img src="/tech images/windows.png" alt="Image 9">
+
+        <!-- Add more images as needed -->
+      </div>
+    </div>
+
+    <section id="achievements">
+
+      <div class="section" id="experience">
+        <div class="container achievements">
+          <div class="h4 text-center mb-4 title">Achievements</div>
+          <div id="initialAchievements">
+            <div class="card">
+              <div class="row">
+                <div class="col-md-3 " data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body achievements-header">
+                    <p>September 2022 - October 2022</p>
+                    <div class="h5">HTML5</div>
+                  </div>
+                </div>
+                <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body">
+                    <div class="h5">University of Michigan</div>
+                    <p>The Web Design for Everybody course provides a beginner-friendly introduction to web development
+                      and programming. It covers theory, practical skills, and overlooked aspects of webpage creation,
+                      with a focus on adhering to standards for accessibility. No prior programming or IT experience is
+                      required. The course includes a final project to create a basic webpage, and it serves as the
+                      foundation for advanced courses in CSS3, JavaScript, and responsive design.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="row">
+                <div class="col-md-3 " data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body achievements-header">
+                    <p>April 2023 - May 2023</p>
+                    <div class="h5">CSS3</div>
+                  </div>
+                </div>
+                <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body">
+                    <div class="h5">University of Michigan</div>
+                    <p>The CSS3 Basics course teaches the fundamentals of Cascading Style Sheets (CSS3) for creating
+                      visually appealing webpages. Students learn how to write CSS rules, test code, and follow
+                      accessibility guidelines. The course covers layout customization, font selection, and color
+                      schemes.
+                      By the end, learners can sketch webpage designs and implement them with CSS. This course is part
+                      of
+                      the Web Design for Everybody specialization, with subsequent courses focusing on JavaScript
+                      interactivity and responsive design.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="row">
+                <div class="col-md-3 " data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body achievements-header">
+                    <p>September 2022 - October 2022</p>
+                    <div class="h5">Java</div>
+                  </div>
+                </div>
+                <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body">
+                    <div class="h5">Duke University</div>
+                    <p>Learn to code in Java and improve your programming and problem-solving skills. You will learn to
+                      design algorithms as well as develop and debug programs. Using custom open-source classes, you
+                      will
+                      write programs that access and transform images, websites, and other types of data. At the end of
+                      the course you will build a program that determines the popularity of different baby names in the
+                      US
+                      over time by analyzing comma separated value (CSV) files. </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <center><button class="show_btn" onclick="showAllAchievements()" id="showAllButton"
+              style="display: block;">Load More <i class="fa fa-angle-double-down fa-fade" style="font-size:24px"></i>
+            </button></center>
+          <div id="restAchievements" style="display: none;">
+            <div class="card">
+              <div class="row">
+                <div class="col-md-3 " data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body achievements-header">
+                    <p>September 2022 - October 2022</p>
+                    <div class="h5">Python</div>
+                  </div>
+                </div>
+                <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body">
+                    <div class="h5">University Of Michigan</div>
+                    <p>Learn to code in Java and improve your programming and problem-solving skills. You will learn to
+                      design algorithms as well as develop and debug programs. Using custom open-source classes, you
+                      will
+                      write programs that access and transform images, websites, and other types of data. At the end of
+                      the course you will build a program that determines the popularity of different baby names in the
+                      US
+                      over time by analyzing comma separated value (CSV) files. </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="row">
+                <div class="col-md-3 " data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body achievements-header">
+                    <p>September 2022 - October 2022</p>
+                    <div class="h5">Python Data Structures</div>
+                  </div>
+                </div>
+                <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body">
+                    <div class="h5">University Of Michigan</div>
+                    <p>Learn to code in Java and improve your programming and problem-solving skills. You will learn to
+                      design algorithms as well as develop and debug programs. Using custom open-source classes, you
+                      will
+                      write programs that access and transform images, websites, and other types of data. At the end of
+                      the course you will build a program that determines the popularity of different baby names in the
+                      US
+                      over time by analyzing comma separated value (CSV) files. </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="row">
+                <div class="col-md-3 " data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body achievements-header">
+                    <p>February 2022 - March 2022</p>
+                    <div class="h5">C for Everyone</div>
+                  </div>
+                </div>
+                <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body">
+                    <div class="h5">University of California, Santa Cruz</div>
+                    <p>Universal course suitable for all individuals in the modern world. Highlights the importance of
+                      coding as a universally valuable skill across various fields. Emphasizes the prevalence of
+                      algorithms and the need to comprehend their functioning. Recommends C language as an ideal
+                      introduction to coding due to its reliability and ability to facilitate a profound understanding
+                      of
+                      computing processes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="row">
+                <div class="col-md-3 " data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body achievements-header">
+                    <p>September 2022 - October 2022</p>
+                    <div class="h5">Java</div>
+                  </div>
+                </div>
+                <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body">
+                    <div class="h5">Duke University</div>
+                    <p>Learn to code in Java and improve your programming and problem-solving skills. You will learn to
+                      design algorithms as well as develop and debug programs. Using custom open-source classes, you
+                      will
+                      write programs that access and transform images, websites, and other types of data. At the end of
+                      the course you will build a program that determines the popularity of different baby names in the
+                      US
+                      over time by analyzing comma separated value (CSV) files. </p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <center><button class="show_btn" onclick="hideRestAchievements()" id="hideRestButton">Show Less <i
+                  class="fa fa-angle-double-up fa-fade" style="font-size:24px"></i>
+              </button></center>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="Experience">
+
+    </section>
+
+
+    <section id="fun_facts">
+      <center>
+        <h2 class="fun">Fun Facts</h2>
+      </center>
+      <div class="facts ">
+        <div class="row prop_body">
+          <div class="card card_color col-md-3" style="width: 14rem; height: 8rem">
+            <div class="card-body fun_body">
+              <h5 class="card-title"><i class="fa-solid fa-terminal fa-lg" style="color: #00ffff;"></i></h5><br>
+              <h6 class="card-subtitle mb-2 text-muted"><span id="hours_coding_count" class="count">0 </span>+</h6>
+              <p class="card-text">Hours Of Coding</p>
+            </div>
+          </div>
+          <div class="card card_color col-md-3" style="width: 14rem; height: 8rem;">
+            <div class="card-body fun_body">
+              <h5 class="card-title"><i class="fa-solid fa-award fa-lg" style="color: #00ffff;"></i></h5><br>
+              <h6 class="card-subtitle mb-2 text-muted"><span id="science_competition_count" class="count">0 </span>+
+              </h6>
+              <p class="card-text">Awards Won</p>
+
+            </div>
+          </div>
+          <div class="card card_color col-md-3" style="width: 14rem; height: 8rem">
+            <div class="card-body fun_body">
+              <h5 class="card-title"><i class="fa-solid fa-database fa-lg" style="color: #00ffff;"></i></h5><br>
+              <h6 class="card-subtitle mb-2 text-muted"><span id="competition_count" class="count">0 </span>+</h6>
+              <p class="card-text">Projects</p>
+            </div>
+          </div>
+          <div class="card card_color col-md-3" style="width: 14rem; height: 8rem">
+            <div class="card-body fun_body">
+              <p class="card-title"><i class="fa-solid fa-mug-hot fa-lg" style="color: #00ffff;"></i></p><br>
+              <h6 class="card-subtitle mb-2 text-muted"><span id="compe_count" class="count">0 </span>+</h6>
+              <p class="card-text">Cups of Coffee Brewed</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+
+
+      <h2 class="con">Contact</h2>
+
+      <center>
+        <div class="row prop_body">
+
+          <div class="card card_color col-md-6" style="width: 25rem; height: 8rem">
+            <div class="card-body ">
+              <a href="https://accounts.google.com/b/0/AddMailService"><h5 class="card-title"><img width="69" height="69" src="https://img.icons8.com/fluency/48/gmail-new.png"
+                  alt="gmail-new" /></h5><br></a>
+             <a href="https://accounts.google.com/b/0/AddMailService"> <h6 class="card-subtitle mb-2 text-muted">ashudadhich03@gmail.com</h6> </a>
+              <a href="https://accounts.google.com/b/0/AddMailService"><p class="card-text">Email Me</p></a>
+            </div>
+          </div>
+          <div class="card card_color col-md-6" style="width: 25rem; height: 8rem">
+            <div class="card-body ">
+              <p class="card-title"><img width="69" height="69"
+                  src="https://img.icons8.com/3d-plastilina/138/linkedin--v1.png" alt="linkedin--v1" />
+              </p><br>
+              <h6 class="card-subtitle mb-2 text-muted">ashutosh-dadhich</h6>
+              <p class="card-text">Connect</p>
+            </div>   
+          </div>
+        </div>
+      </center>
+
+    </section>
+
+
+
+    <section id="contact_form">
+      <form>
+        <input type="email">
+        <input type="">
+      </form>
+
+    </section>
+
+  </div>
+
+  <script src="trial.js"></script>
+  <script>window.addEventListener('load', function () {
+      var loadingOverlay = document.querySelector('.loading-overlay');
+      loadingOverlay.style.display = 'none';
+    });;
+    window.addEventListener("load", function () {
+      var section = document.getElementById("mySection");
+      section.scrollIntoView({ behavior: 'smooth' });
+    });;
+  </script>
+</body>
+
+</html>
